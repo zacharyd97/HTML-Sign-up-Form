@@ -14,15 +14,22 @@
         <h2>Vacation Contest Sign-Up Form</h2>
         <form action="results.html" method="get"> <!-- TODO: Set Action and Method Properties -->
             <div>
-                <label for="firstname">Your First Name</label>
-                <input type="text" id="firstname" name="firstname">
-                <label for="lastname">Your Last Name</label>
-                <input type="text" id="lastname" name="lastname">
+                <label for="firstname">Your First Name<span class="required-field">*</span>
+                </label>
+                <input  type="text" id="firstname" name="firstname" required minlength="2" maxlength="35">
+                <label for="lastname">Your Last Name<span class="required-field">*</span>
+                </label>
+                <input type="text" id="lastname" name="lastname" required minlength="2" maxlength="35">
+                <label for="age">Your Age</label>
+                <input type="number" name="age" id="age" min="21" max="120" >
+                <h5>Must be 21 or older to enter!</h5>
+
             </div>
                 <fieldset>
                     <legend>Your Contact Info</legend>
-                    <label for="email">Your Email</label>
-                    <input type="text" id="email" name="email">
+                    <label for="email">Your Email<span class="required-field">*</span>
+                    </label>
+                    <input type="text" id="email" name="email" required>
                     <label for="address">Your Street Address</label>
                     <input type="text" id="address" name="address">
                     <label for="city">City</label>
@@ -50,7 +57,7 @@
                         <option value="MD">Maryland</option>
                         <option value="ME">Maine</option>
                         <option value="MI">Michigan</option>
-                        <option value="MN">Minnesota</option>
+                        <option value="MN">Minnesota</option> 
                         <option value="MO">Missouri</option>
                         <option value="MS">Mississippi</option>
                         <option value="MT">Montana</option>
@@ -80,7 +87,7 @@
                         <option value="WY">Wyoming</option>
                     </select>
                     <label for="zip">Your Zipcode</label>
-                    <input type="text" id="zip" name="zip">
+                    <input type="number" id="zip" name="zip">
                     <input type="submit">
                     
                 </fieldset>
